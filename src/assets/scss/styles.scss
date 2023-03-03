@@ -1,0 +1,249 @@
+/* Font */
+@font-face {
+  font-family: GothamLight;
+  src: url(../fonts/GothamRounded-Light.otf);
+}
+@font-face {
+  font-family: GothamRegular;
+  src: url(../fonts/GothamRounded-Book.otf);
+}
+@font-face {
+  font-family: GothamBold;
+  src: url(../fonts/GothamRounded-Medium.otf);
+}
+@font-face {
+  font-family: GothamExtraBold;
+  src: url(../fonts/GothamRounded-Bold.otf);
+}
+
+/* Bootstrap */
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$font: "GothamRegular";
+$fontL: "GothamLight";
+$fontB: "GothamBold";
+$fontEB: "GothamExtraBold";
+
+$primary: rgb(54, 34, 34);
+$pantoneF: #bb2649;
+$pantoneS: #edcdc2;
+$grey: rgb(187, 187, 187);
+$greyBlack: rgb(92, 92, 92);
+$purple: #53219c;
+
+@import "./sidebar";
+
+/* All */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: $font;
+}
+
+.color-primary {
+  color: $primary;
+}
+.color-pantonef {
+  color: $pantoneF;
+}
+.color-pantones {
+  color: $pantoneS;
+}
+
+.bg-color-app {
+  background-color: $pantoneS;
+}
+
+// Form
+form {
+  & input {
+    &.form-control {
+      background-color: transparent;
+      border: 0px;
+      border-bottom: 1px solid $greyBlack;
+      border-radius: 0px;
+      padding-left: 0px;
+      padding-bottom: 0.25rem;
+      color: $primary;
+
+      &:focus {
+        box-shadow: none;
+        color: $primary;
+        border-bottom: 1px solid $greyBlack;
+        background-color: transparent;
+      }
+    }
+  }
+
+  & select.form-control {
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid $greyBlack;
+    border-radius: 0px;
+    padding-left: 0px;
+    padding-bottom: 0.25rem;
+    color: $primary;
+
+    &:focus {
+      box-shadow: none;
+      color: #000;
+      border-bottom: 1px solid #2f3646;
+      background-color: transparent;
+    }
+  }
+
+  & .form-label {
+    color: $pantoneF;
+  }
+
+  & .btn-primary {
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border: 0px;
+    background-color: $pantoneF;
+    font-size: 16px;
+
+    &:hover,
+    &:active {
+      background-color: #d1526f !important;
+      transition: 0.7s;
+    }
+    &:focus-visible {
+      background-color: $pantoneF;
+      border-color: var(--bs-btn-hover-border-color);
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(187, 38, 73, 0.5);
+    }
+    &:disabled {
+      background: $grey;
+      color: #000;
+    }
+  }
+}
+
+.btn-pages {
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  border: 0px;
+  background-color: $pantoneF;
+  font-size: 12px;
+
+  &:hover,
+  &:active {
+    background-color: #d1526f !important;
+    transition: 0.7s;
+  }
+}
+
+// Login
+.card-login {
+  background-color: transparent;
+  padding: 2.5rem 1.5rem;
+  border-width: 0px;
+  box-shadow: 2px 2px 14px -4px rgb(0 0 0);
+  border-radius: 20px;
+  background-color: #bb2649;
+
+  & .checkerboard-border {
+    position: absolute;
+    top: -55px;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: $pantoneS;
+
+    & img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  & form {
+    & input.form-control {
+      border-bottom: 1px solid rgb(219 219 219);
+      color: rgb(183 183 183);
+    }
+    & .form-label {
+      color: $pantoneS;
+    }
+    & .btn-primary {
+      background-color: $pantoneS;
+      color: $pantoneF;
+      font-family: $fontEB;
+      font-size: 16px;
+
+      &:hover,
+      &:active {
+        background-color: #dbb0a3 !important;
+        color: $pantoneF;
+        transition: 0.7s;
+      }
+    }
+  }
+}
+
+// SweetAlert
+.swal-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+// Loading
+.loading {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+
+  &:before,
+  &:after,
+  div {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid $pantoneF;
+  }
+
+  &:before {
+    content: "";
+    animation: scale 1s ease-in infinite;
+  }
+  &:after {
+    content: "";
+    animation: scale 2s ease-in infinite;
+  }
+
+  div {
+    animation: scale 3s ease-in infinite;
+  }
+}
+
+.loading.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+}
+
+@keyframes scale {
+  from {
+    transform: translate(-50%, -50%) scale(0, 0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1, 1);
+  }
+}

@@ -1,0 +1,178 @@
+.navbar{
+    background: $white;
+
+    i{
+        cursor: pointer;
+    }
+    .navbar-page{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .navbar-nav{
+        .nav-link{
+            color: $grey;
+            font-size: 14px;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    .flags{
+        img{
+            width: 20px;
+            margin: 0 5px;
+        }
+    }
+
+    .dropdown{
+
+        .dropdown-toggle{
+            background: transparent !important;
+            border: transparent;
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            &:focus{
+                box-shadow: none;
+            }
+
+            &::after{
+                display: none;
+            }
+
+            i{
+                color: $grey;
+            }
+        }
+    }
+
+}
+  
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    background-color: $pantoneF;
+
+    .sidebar-heading {
+        padding: 2.2rem 0 1.4rem;
+        h3{
+            font-size: 1.2rem;
+            color: $white;
+        }
+        a{
+            img{
+                width: 100px;
+            }
+
+            &:hover{
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+    }
+
+    .list-group {
+        width: 15rem;
+
+        .list-group-item{
+            background-color: $pantoneF;
+            color: $white;
+            font-size: 15px;
+            border: 0;
+            transition: .6s;
+
+            i{
+                color: $white;
+                margin-right: 10px;
+            }
+            .name-list {
+                margin-top: 3px;
+            }
+            &:hover{
+                color: $pantoneF;
+                font-weight: bold;
+                opacity: .7;
+                background: $pantoneS;
+
+                & i {
+                    color: $pantoneF;
+                }
+            }
+        }
+
+        .list-group-subitem{
+            padding-left: 65px;
+
+            strong{
+                padding: 5px;
+                border-radius: .25rem;
+                font-size: 10px;
+            }
+        }        
+    }
+
+    .accordion{
+        background-color: $pantoneF;
+        .card{
+            .card-header{
+                background-color: $pantoneF;
+
+                button{
+                    color: $grey;
+                }
+            }
+            .collapse {
+                background-color: $pantoneF;
+                .card-body{
+                    a{
+                        font-size: 13px;
+                        color: $white;
+                    }
+                }
+            }
+            .collapsing{
+                background-color: $pantoneF;
+                .card-body{
+                    a{
+                        font-size: 13px;
+                        color: $white;
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+}
+  
+#page-content-wrapper {
+    min-width: 100vw;
+}
+  
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+  
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+        max-width: 250px;
+    }
+  
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+}
