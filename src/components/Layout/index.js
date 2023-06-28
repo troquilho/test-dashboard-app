@@ -77,7 +77,7 @@ export default class Sidebar extends Component {
                             </div>
                         </div>
                         <div className="w-100 py-3 text-center small text-muted">
-                            &copy; Gustavo Troquilho {new Date().getFullYear()} - All Rights Reserved
+                            &copy; Gustavo Troquilho {new Date()} - All Rights Reserved
                         </div>
                     </div>
                 </div>
