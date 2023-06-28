@@ -31,5 +31,5 @@ jobs:
           npm install
           npm run build
           rm -rf /var/www/html/test-app/*
-          cp -R dist/* /var/www/html/test-app
+          cp -R build/* /var/www/html/test-app
           sudo service nginx restart
