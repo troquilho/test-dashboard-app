@@ -72,7 +72,7 @@ export default class Login extends Component {
                                 </div>
                             </div>
                             <Form onSubmit={this.save}>
-                                <Row className="mb-5">
+                                <Row className="mb-2">
                                     <Col xs={12} md={12}>
                                         <Form.Group className="mb-5">
                                             <Form.Label className="color-white fw-bold">E-mail</Form.Label>
@@ -86,7 +86,7 @@ export default class Login extends Component {
                                         </Form.Group>
                                     </Col>
                                 </Row>
-                                <Row className="mt-4">
+                                <Row>
                                     <Col xs={12} className="d-flex justify-content-center align-items-center">
                                         <Button variant="primary" type="submit">
                                             LOGIN 
@@ -94,7 +94,7 @@ export default class Login extends Component {
                                     </Col>
                                     {error &&
                                         <Col xs={12} className="d-flex justify-content-center align-items-center">
-                                            <Alert variant={"danger"} className="mt-3 text-center small">{errorMessage}</Alert>
+                                            <Alert variant={"danger"} className="mt-3 mb-0 text-center small">{errorMessage}</Alert>
                                         </Col>
                                     }
                                 </Row>
