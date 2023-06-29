@@ -58,7 +58,7 @@ export default class Leads extends Component {
         const { user, load, error, errorMessage } = this.state;
 
         return (
-        <div className="h-100 bg-color-app">
+        <div className="h-100 leads-h-100 bg-color-app">
             <Navbar className="justify-content-end bg-color-app" fixed="top">
                 <Nav.Item className="py-3 px-4">
                     <Nav.Item>
@@ -71,11 +71,11 @@ export default class Leads extends Component {
                     </Nav.Item>
                 </Nav.Item>
             </Navbar>
-            <Container className="h-100">
-                <Row className="h-100 align-items-center">
+            <Container className="h-100 leads-h-100">
+                <Row className="h-100 leads-h-100 align-items-center">
                     <Col xs={12} md={12}>
-                        <Form onSubmit={this.save}>
-                            <Row className="mb-5">
+                        <Form className="margin-mobile" onSubmit={this.save}>
+                            <Row className="mb-lg-5 mb-md-2">
                                 <Col xs={12} md={4}>
                                     <Form.Group className="mb-4">
                                         <Form.Label className="color-white fw-bold">Nome</Form.Label>
@@ -134,7 +134,7 @@ export default class Leads extends Component {
                             </Row>
                         </Form>
                     </Col>
-                    <Col className="fixed-bottom d-flex justify-content-center pb-3">
+                    <Col className="d-flex justify-content-center text-center pb-3">
                         <span className="small color-pantonef">&copy; Gustavo Troquilho {new Date().getFullYear()} - All Rights Reserved</span>
                     </Col>
                 </Row>
