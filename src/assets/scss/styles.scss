@@ -148,10 +148,6 @@ form {
   margin-bottom: 3rem;
 }
 
-.leads-h-100 {
-  height: auto !important;
-}
-
 // Login
 .card-login {
   background-color: transparent;
@@ -255,5 +251,11 @@ form {
   }
   to {
     transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+@media (min-width: 768) {
+  .leads-h-100 {
+    height: auto !important;
   }
 }
