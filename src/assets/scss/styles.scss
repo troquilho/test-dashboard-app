@@ -142,12 +142,6 @@ form {
   }
 }
 
-// Leads
-.margin-mobile {
-  margin-top: 6rem;
-  margin-bottom: 3rem;
-}
-
 // Login
 .card-login {
   background-color: transparent;
@@ -254,8 +248,25 @@ form {
   }
 }
 
-@media (min-width: 768) {
+@media (max-width: 768px) {
+  // Leads
   .leads-h-100 {
     height: auto !important;
+  }
+
+  .margin-mobile {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .fixed-bottom {
+    position: relative;
+  }
+}
+
+@media (min-height: 600px) {
+  // Leads
+  .leads-h-100 {
+    height: 100% !important;
   }
 }

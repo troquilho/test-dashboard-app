@@ -134,7 +134,7 @@ export default class Leads extends Component {
                             </Row>
                         </Form>
                     </Col>
-                    <Col className="d-flex justify-content-center text-center pb-3">
+                    <Col className="fixed-bottom d-flex justify-content-center text-center pb-3">
                         <span className="small color-pantonef">&copy; Gustavo Troquilho {new Date().getFullYear()} - All Rights Reserved</span>
                     </Col>
                 </Row>
