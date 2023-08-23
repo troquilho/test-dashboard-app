@@ -25,11 +25,9 @@ jobs:
         key: ${{secrets.SSH_PRIVATE_KEY}}
         script: |
           sudo service nginx start
-          git clone git@github.com:troquilho/test-dashboard-app.git
-          cd test-dashboard-app
-          git pull
           npm install
           npm run build
           rm -rf /var/www/html/test-app/*
           cp -R build/* /var/www/html/test-app
+          sudo chown -R www-data:www-data /var/www/html/test-app/
           sudo service nginx restart
